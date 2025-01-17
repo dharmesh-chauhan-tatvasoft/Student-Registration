@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dimen_16"
+    tools:context=".AddStudent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/studentNameEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_name"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_f1"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/studentAgeEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_age"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:layout_constraintTop_toBottomOf="@+id/studentNameEditTextLayout" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentAgeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:background="@color/color_f1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/studentCourseEditTextLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_course"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:layout_constraintTop_toBottomOf="@+id/studentAgeEditTextLayout" >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/studentCourseEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_f1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/selectGenderLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_gender"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:layout_constraintTop_toBottomOf="@+id/studentCourseEditTextLayout"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <RadioGroup
+            android:id="@+id/genderSelectionRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/selectGenderLabel">
+                <RadioButton android:id="@+id/maleRadio"
+                    android:text="@string/male"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+                <RadioButton android:id="@+id/femaleRadio"
+                    android:text="@string/female"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/saveData"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/save" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
