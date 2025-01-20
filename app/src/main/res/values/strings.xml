@@ -3,7 +3,8 @@
     <string name="enter_name">Enter name</string>
     <string name="enter_age">Enter age</string>
     <string name="select_gender">Select gender</string>
-    <string name="enter_course">Enter course</string>
+    <string name="select_course">Select course</string>
+    <string name="course_selection">Course selection</string>
     <string name="save">Save</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
@@ -17,6 +18,14 @@
     <string name="age">Age:</string>
     <string name="gender">Gender:</string>
     <string name="course">Course:</string>
+    <string name="status">Status:</string>
     <string name="update_information">Update Information</string>
     <string name="delete">Delete</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="is_active">Is active?</string>
+    <string name="name_error">Please enter student name</string>
+    <string name="age_error">Please enter student age</string>
+    <string name="course_error">Please select course</string>
+    <string name="gender_error">Please select gender</string>
 </resources>

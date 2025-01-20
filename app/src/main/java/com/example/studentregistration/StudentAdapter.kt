@@ -31,6 +31,7 @@ class StudentAdapter(
         private val ageText: MaterialTextView = itemView.findViewById(R.id.ageText)
         private val genderText: MaterialTextView = itemView.findViewById(R.id.genderText)
         private val courseText: MaterialTextView = itemView.findViewById(R.id.courseText)
+        private val statusText: MaterialTextView = itemView.findViewById(R.id.statusText)
         private val updateButton: Button = itemView.findViewById(R.id.updateButton)
         private val deleteButton: Button = itemView.findViewById(R.id.deleteButton)
         fun bind(student: Student) {
@@ -38,6 +39,7 @@ class StudentAdapter(
             ageText.text = student.age.toString()
             genderText.text = student.gender
             courseText.text = student.course
+            statusText.text = student.status
 
             updateButton.setOnClickListener {
                 onUpdateClick(student)

@@ -22,7 +22,8 @@
                     android:id="@+id/studentNameEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/color_f1"/>
+                    android:background="@color/color_f1"
+                    android:inputType="textPersonName"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -42,21 +43,22 @@
                     android:background="@color/color_f1" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/studentCourseEditTextLayout"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/selectCourseLabel"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_course"
+            android:text="@string/select_course"
             android:layout_marginTop="@dimen/dimen_16"
-            app:layout_constraintTop_toBottomOf="@+id/studentAgeEditTextLayout" >
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/studentCourseEditText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/color_f1" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentAgeEditTextLayout"/>
+        <Spinner
+            android:id="@+id/courseSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50"
+            android:background="@drawable/list_background"
+            android:contentDescription="@string/course_selection"
+            android:layout_marginTop="@dimen/dimen_10"
+            app:layout_constraintTop_toBottomOf="@+id/selectCourseLabel"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/selectGenderLabel"
@@ -64,7 +66,7 @@
             android:layout_height="wrap_content"
             android:text="@string/select_gender"
             android:layout_marginTop="@dimen/dimen_16"
-            app:layout_constraintTop_toBottomOf="@+id/studentCourseEditTextLayout"
+            app:layout_constraintTop_toBottomOf="@+id/courseSpinner"
             app:layout_constraintStart_toStartOf="parent"/>
         <RadioGroup
             android:id="@+id/genderSelectionRadioGroup"
@@ -82,6 +84,24 @@
                     android:layout_width="wrap_content" />
         </RadioGroup>
 
+        <LinearLayout
+            android:id="@+id/studentActiveTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16"
+            app:layout_constraintTop_toBottomOf="@+id/genderSelectionRadioGroup"
+            app:layout_constraintStart_toStartOf="parent">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/studentActiveTextLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/is_active"/>
+                <CheckBox
+                    android:id="@+id/studentActiveCheckbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/saveData"
             android:layout_width="@dimen/dimen_0"
@@ -89,6 +109,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="@string/save" />
+            android:text="@string/add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
